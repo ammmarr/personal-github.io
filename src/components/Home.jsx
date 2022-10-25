@@ -1,32 +1,46 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
-export default function Home(props) {
-  console.log()
+export default function Home() {
+  const [offsetY, setOffsetY] = useState(0);
+
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const handleScroll = () => setOffsetY(window.scrollY);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollRatio = offsetY / scrollable; 
+
   let homePara = {
-   opacity: Math.abs(1- (props.offsetY/(document.body.offsetHeight-window.innerHeight)*5)),
-   transform: `translateY(-${props.offsetY * 0.8}px)`,
-   size: `${(props.offsetY/(document.body.offsetHeight-window.innerHeight)*100)}%`
-   
-  }
+    opacity: `${Math.abs(1 - scrollRatio) * 100}%`,
+    transform: `translateY(${offsetY * 0.4}px)`,
+  };
+
   return (
-    <div className="home" id="home" 
-    style={homePara}>
+    <div className="home" id="home" style={homePara}>
       <div className="left-section">
         <h1>
-          Hi,I am <span>Ammar Omar</span>
+          Hey,I AM <span className="reveal-text">AMMAR OMAR</span>
         </h1>
         <p>
           A passionate entry level Front-end developer that you can count on.
         </p>
         <button className="button">
-          CV
+          RESUME
           <div className="button__horizontal"></div>
           <div className="button__vertical"></div>
         </button>
+        
       </div>
-      <div className="right-section">
-        <img src="src\assets\cvphoto.JPG"></img>
+      <div className="right-section ">
+        <img src="src\assets\CVpicturePNG.PNG" ></img>
       </div>
+      
+      
     </div>
-  );
+  );  
 }
