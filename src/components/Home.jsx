@@ -13,7 +13,7 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollRatio = offsetY / scrollable; 
+  const scrollRatio = offsetY / scrollable;
 
   let homePara = {
     opacity: `${Math.abs(1 - scrollRatio) * 100}%`,
@@ -34,13 +34,10 @@ export default function Home() {
           <div className="button__horizontal"></div>
           <div className="button__vertical"></div>
         </button>
-        
       </div>
       <div className="right-section ">
-        <img src="src\assets\CVpicturePNG.PNG" ></img>
+        <img src="src\assets\CVpicturePNG.PNG"></img>
       </div>
-      
-      
     </div>
-  );  
+  );
 }

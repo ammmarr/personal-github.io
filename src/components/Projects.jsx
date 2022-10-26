@@ -1,10 +1,10 @@
 import React from "react";
 import ProjectComponent from "./ProjectComponent";
 import FindMe from "./FindMe";
-import markdownImg from "../assets/markdownImg.png"
-import budgetCalculator from "../assets/budgetCalculator.png"
-import weatherImg from "../assets/weatherSnippet.png"
-import todoListImg from "../assets/todoListImg.png"
+import markdownImg from "../assets/markdownImg.png";
+import budgetCalculator from "../assets/budgetCalculator.png";
+import weatherImg from "../assets/weatherSnippet.png";
+import todoListImg from "../assets/todoListImg.png";
 
 export default function Projects() {
   const projectsData = [
@@ -28,23 +28,22 @@ export default function Projects() {
       gitHub: "",
       Live: "",
       key: Math.floor(Math.random() * 1000000),
-    }, {
+    },
+    {
       imageUrl: todoListImg,
       name: "Todo List",
       gitHub: "",
       Live: "",
       key: Math.floor(Math.random() * 1000000),
     },
-   
   ];
 
   return (
-    
     <div className="projects-section" id="projects">
       <h1>PROJECTS</h1>
-      
-      <span className="thin-line" ></span>
-      <div className="projects-component-container" >
+
+      <span className="thin-line"></span>
+      <div className="projects-component-container">
         {projectsData.map((comp) => (
           <ProjectComponent
             id={comp.key}
@@ -52,13 +51,8 @@ export default function Projects() {
             name={comp.name}
             key={comp.key}
           />
-          
         ))}
       </div>
-      
-    
-   
     </div>
-    
   );
 }
