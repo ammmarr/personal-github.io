@@ -11,29 +11,29 @@ export default function Projects() {
     {
       imageUrl: markdownImg,
       name: "Markdown previewer",
-      gitHub: "",
-      Live: "",
+      gitHub: "https://github.com/ammmarr/markdown",
+      Live: "https://ammmarr.github.io/markdown/",
       key: Math.floor(Math.random() * 1000000),
     },
     {
       imageUrl: budgetCalculator,
       name: "Budget Calculator",
-      gitHub: "",
-      Live: "",
+      gitHub: "https://github.com/ammmarr/Budget-calculator",
+      Live: "https://ammmarr.github.io/Budget-calculator/",
       key: Math.floor(Math.random() * 1000000),
     },
     {
       imageUrl: weatherImg,
       name: "Weather Finder",
-      gitHub: "",
-      Live: "",
+      gitHub: "https://github.com/ammmarr/weather-app",
+      Live: "https://ammmarr.github.io/todo-app/",
       key: Math.floor(Math.random() * 1000000),
     },
     {
       imageUrl: todoListImg,
       name: "Todo List",
-      gitHub: "",
-      Live: "",
+      gitHub: "https://github.com/ammmarr/todo-app",
+      Live: "https://ammmarr.github.io/todo-app/",
       key: Math.floor(Math.random() * 1000000),
     },
   ];
@@ -50,6 +50,8 @@ export default function Projects() {
             imageUrl={comp.imageUrl}
             name={comp.name}
             key={comp.key}
+            live={comp.Live}
+            gh={comp.gitHub}
           />
         ))}
       </div>

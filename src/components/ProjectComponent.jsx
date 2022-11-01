@@ -23,13 +23,13 @@ export default function ProjectComponent(props) {
         <div className="blur"></div>
       </div>
       <div className="links">
-        <a>
+        <a href={props.gh} target="_blank">
           <button className="button-57" role="button">
             <span className="text">GITHUB</span>
             <span>SOURCE CODE</span>
           </button>
         </a>
-        <a>
+        <a href={props.live} target="_blank">
           <button className="button-57" role="button">
             <span className="text">LIVE</span>
             <span>OPEN LIVE</span>
