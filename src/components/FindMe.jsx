@@ -38,63 +38,48 @@ export default function FindMe() {
 
   return (
     <div className="findme-section" id="findme">
-      <h1>FIND ME IN</h1>
-      <span className="thin-line" />
-      <div className="work-links">
-        <a>
-          <button className="button-57 acc-btn" role="button">
-            <span className="text">GITHUB</span>
-            <span>github acc</span>
-          </button>
-        </a>
-        <a>
-          <button className="button-57 acc-btn" role="button">
-            <span className="text">UPWORK</span>
-            <span>upwork acc</span>
-          </button>
-        </a>
-      </div>
-      <span className="thin-line" />
-      <h2>OR SEND ME AN EMAIL</h2>
-
-      <div className="send-email">
-        <form ref={form} onSubmit={sendEmail}>
-          <div className="findme-dividor-container">
-            <div className="findme-left-section">
-              <input
-                className="input"
+      <h1>SEND ME AN EMAIL</h1>
+      <div className="find-me-card">
+        <div className="send-email">
+          <form ref={form} onSubmit={sendEmail}>
+            <div className="findme-dividor-container">
+              <div className="findme-left-section">
+                <input
+                  className="input"
+                  type="text"
+                  name="user_name"
+                  placeholder="NAME"
+                  required
+                ></input>
+                <input
+                  className="input"
+                  type="email"
+                  name="user_email"
+                  placeholder="EMAIL"
+                  required
+                ></input>
+                <input
+                  className="input"
+                  type="text"
+                  name="subject"
+                  placeholder="SUBJECT"
+                  required
+                ></input>
+              </div>
+              <textarea
+                className="message"
                 type="text"
-                name="user_name"
-                placeholder="NAME"
+                name="message"
+                placeholder="MESSAGE"
                 required
-              ></input>
-              <input
-                className="input"
-                type="email"
-                name="user_email"
-                placeholder="EMAIL"
-                required
-              ></input>
-              <input
-                className="input"
-                type="text"
-                name="subject"
-                placeholder="SUBJECT"
-                required
-              ></input>
+              ></textarea>
             </div>
-            <textarea
-              className="message"
-              type="text"
-              name="message"
-              placeholder="MESSAGE"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" id="submit-button">
-            SEND
-          </button>
-        </form>
+            <button type="submit" id="submit-button">
+              SEND
+            </button>
+          </form>
+          
+        </div>
       </div>
     </div>
   );

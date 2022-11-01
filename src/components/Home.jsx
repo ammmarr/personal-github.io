@@ -30,7 +30,9 @@ export default function Home() {
           A passionate entry level Front-end developer that you can count on.
         </p>
         <button className="button">
-          RESUME
+          <a href="Resume.pdf" download="Resume.pdf">
+            RESUME
+          </a>
           <div className="button__horizontal"></div>
           <div className="button__vertical"></div>
         </button>
